@@ -23,3 +23,6 @@ include ApplicationCookbook::ResourceBase
 attribute :npm, :kind_of => [NilClass, TrueClass, FalseClass], :default => true
 attribute :template, :kind_of => [String, NilClass], :default => nil
 attribute :entry_point, :kind_of => String, :default => 'app.js'
+attribute :respawn, :kind_of => [NilClass, TrueClass, FalseClass], :default => true
+attribute :respawn_count, :kind_of => Integer, :default => 10
+attribute :respawn_interval, :kind_of => Integer, :default => 5

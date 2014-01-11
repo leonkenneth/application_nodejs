@@ -17,3 +17,8 @@ setgid <%= @group %>
 <% end -%>
 chdir <%= @app_dir %>
 exec <%= @node_dir %>/bin/node <%= @entry %>
+
+<% if @respawn %>
+respawn
+respawn limit <%= @respawn_count %> <%= @respawn_interval %>
+<% end %>
